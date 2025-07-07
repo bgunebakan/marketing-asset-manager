@@ -232,8 +232,8 @@ class BudgetManager:
                         total_increased += 1
                 elif asset.performance_score < low_performance_threshold:
                     logger.info(
-                        f"Decreasing budget for single low-performing asset: {asset.filename}",
-                        " (score: {asset.performance_score})",
+                        f"Decreasing budget for single low-performing asset: {asset.filename}"
+                        " (score: {asset.performance_score})"
                     )
                     if self.update_asset_budget(
                         asset,
@@ -308,8 +308,8 @@ class BudgetManager:
         }
 
         logger.info(
-            f"Budget adjustment completed: {total_increased} increased,",
-            f" {total_decreased} decreased, {total_unchanged} unchanged",
+            f"Budget adjustment completed: {total_increased} increased,"
+            f" {total_decreased} decreased, {total_unchanged} unchanged"
         )
 
         return summary
