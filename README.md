@@ -218,3 +218,23 @@ The system generates several types of reports in the `tmp/reports/` directory:
 2. **Invalid Assets Report** (`invalid_assets.txt`): Detailed list of invalid assets and reasons
 3. **Error Report** (`error_report.txt`): List of errors encountered during processing
 4. **Budget Report** (`budget_report.json`): Summary of budget changes and performance metrics
+
+## Future Improvements
+
+Marketing Asset Manager at the moment is good for managing our assets, but there are some things that we could do to make it better and make it easier to use. This section explains possible improvements that could be made in the future.
+
+### Distributed System
+
+Current system handles assets one by one, which is not the best way to handle it. We could use a distributed system to handle assets in parallel, which would make the system faster and more efficient. We should take care of the API limits and system resources.
+
+### Asset file processing
+
+Current system downloads assets from Google Drive and stores them in temporary directory. We could cache files and skip downloading them if they are already downloaded. It could be same for processed files.
+
+### Reporting
+
+Current system generates reports in the `tmp/reports/` directory. We could improve reporting by adding more detailed information and making it more user-friendly. We could also add html generated reports for non technical users.
+
+### User Interface
+
+Current system does not have a user interface. We could add a web interface to make it easier to use. Users could see process status, and processed assets in the web interface.
