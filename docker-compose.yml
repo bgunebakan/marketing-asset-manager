@@ -16,3 +16,5 @@ services:
       - LOG_LEVEL=INFO
     restart: unless-stopped
     command: ["python", "main.py"]
+# TODO: Application starts immediately after build,
+# we should add a management command or UI to start the application
