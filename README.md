@@ -1,5 +1,7 @@
 # Marketing Asset Manager
 
+[![Python CI](https://github.com/bgunebakan/marketing-asset-manager/actions/workflows/python-ci.yml/badge.svg)](https://github.com/bgunebakan/marketing-asset-manager/actions/workflows/python-ci.yml)
+
 Marketing Asset Manager is a system for managing, organizing, validating, and optimizing marketing assets for Google Ads campaigns. It streamlines the workflow for marketing teams by automating asset processing, validation, organization, and budget optimization.
 
 ## Table of Contents
@@ -12,9 +14,7 @@ Marketing Asset Manager is a system for managing, organizing, validating, and op
 - [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Asset Naming Convention](#asset-naming-convention)
-- [Google Sheets Structure](#google-sheets-structure)
 - [Reports](#reports)
-- [License](#license)
 
 ## Features
 
