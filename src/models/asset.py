@@ -55,10 +55,7 @@ class Asset:
         """
         return (
             self.is_valid_name
-            and (
-                self.is_buyout_valid
-                or (self.quality_score is not None and self.quality_score > 5)
-            )
+            and (self.is_buyout_valid or (self.quality_score is not None and self.quality_score > 5))
             and (self.is_privacy_compliant is not None and self.is_privacy_compliant)
         )
 

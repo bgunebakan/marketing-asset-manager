@@ -94,9 +94,7 @@ class AssetParser:
             "asset_format": lambda a: a.asset_format,
             "duration": lambda a: a.duration,
             "year": lambda a: str(a.production_date.year) if a.production_date else "",
-            "month": lambda a: (
-                str(a.production_date.month) if a.production_date else ""
-            ),
+            "month": lambda a: (str(a.production_date.month) if a.production_date else ""),
         }
 
         if field_name in field_mapping:
@@ -105,9 +103,7 @@ class AssetParser:
 
         return "Unset"
 
-    def get_hierarchy_path(
-        self, asset: Asset, hierarchy_settings: HierarchySettings
-    ) -> list:
+    def get_hierarchy_path(self, asset: Asset, hierarchy_settings: HierarchySettings) -> list:
         """Get the hierarchy path for an asset based on hierarchy levels.
 
         Args:
@@ -126,9 +122,7 @@ class AssetParser:
 
         return path
 
-    def create_asset_from_parsed_data(
-        self, filename: str, parsed_data: Dict[str, str]
-    ) -> Asset:
+    def create_asset_from_parsed_data(self, filename: str, parsed_data: Dict[str, str]) -> Asset:
         """Create an Asset object from parsed filename data.
 
         Args:
