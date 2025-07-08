@@ -111,6 +111,47 @@ The tool will:
 5. Upload processed assets to the target folder
 6. Generate validation and budget reports
 
+## Running Tests
+
+The project uses pytest for running tests. To run the tests, follow these steps:
+
+1. Make sure you have installed all the dependencies including the testing ones:
+
+```bash
+pip install -r requirements.txt
+```
+
+2. Run all tests:
+
+```bash
+pytest
+```
+
+3. Run specific test files:
+
+```bash
+pytest tests/unit/services/test_budget_manager.py
+pytest tests/unit/services/test_asset_validator.py
+```
+
+4. Run a specific test class:
+
+```bash
+pytest tests/unit/services/test_budget_manager.py::TestBudgetManager
+```
+
+5. Run a specific test method:
+
+```bash
+pytest tests/unit/services/test_budget_manager.py::TestBudgetManager::test_generate_budget_report
+```
+
+6. Run tests with verbose output:
+
+```bash
+pytest -v
+```
+
 ## Project Structure
 
 ```
