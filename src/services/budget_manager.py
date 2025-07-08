@@ -314,6 +314,7 @@ class BudgetManager:
 
         return summary
 
+    # TODO: We can create a new reporting module to standardize reporting
     def generate_budget_report(self, report_dir: str) -> str:
         """Generate a report of budget changes.
 

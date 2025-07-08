@@ -95,10 +95,10 @@ class AssetReorganizer:
 
         for file in source_files:
             # Remove limit for production use
-            if source_files.index(file) < 10:
-                continue
-            if source_files.index(file) == 20:
-                break
+            # if source_files.index(file) < 10:
+            #     continue
+            # if source_files.index(file) == 20:
+            #     break
 
             file_id = file.get("id")
             file_name = file.get("name")
@@ -124,10 +124,12 @@ class AssetReorganizer:
                 parsed_data=parsed_data,
                 sheet_data=matching_sheet_data,
             )
-
+            # TODO: this takes so much time, it can be done with batch processing
+            # needs to done with api limit (5 threads parallel) in mind
             asset_file_path = os.path.join(self.assets_dir, file_name)
             self.drive_service.download_file(file_id, asset_file_path)
 
+            # TODO: This is also can be done in distrubuted worker
             processed_file_path = os.path.join(self.processed_dir, f"processed_{file_name}")
             self.drive_service.process_image(asset_file_path, processed_file_path)
 
@@ -203,7 +205,8 @@ class AssetReorganizer:
 
         logger.info(f"Detailed validation report saved to: {report_path}")
 
-        # Save invalid assets list to a more readable format
+        # TODO: We can improve this with html report or markup report
+        # So we can include to UI interface for better UX
         if report["invalid_assets"] > 0:
             invalid_report_path = os.path.join(self.reports_dir, "invalid_assets.txt")
             with open(invalid_report_path, "w") as f:
