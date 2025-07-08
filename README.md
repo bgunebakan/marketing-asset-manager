@@ -15,6 +15,7 @@ Marketing Asset Manager is a system for managing, organizing, validating, and op
 - [Project Structure](#project-structure)
 - [Asset Naming Convention](#asset-naming-convention)
 - [Reports](#reports)
+- [Future Improvements](#future-improvements)
 
 ## Features
 
